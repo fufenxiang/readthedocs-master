@@ -35,11 +35,6 @@ extensions = [
     'recommonmark',
 #    'sphinx_markdown_tables',
 ]
-from recommonmark.parser import CommonMarkParser
-source_parsers = {
-'.md': CommonMarkParser,
-}
-source_suffix = ['.rst', '.md']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
