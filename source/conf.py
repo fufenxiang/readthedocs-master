@@ -32,6 +32,7 @@ release = 'v1'
 # ones.
 # support markdown and markdown-table. 
 extensions = [
+    'recommonmark',
 #    'sphinx_markdown_tables',
 ]
 from recommonmark.parser import CommonMarkParser
