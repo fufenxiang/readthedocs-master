@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
@@ -32,14 +32,12 @@ release = 'v1'
 # ones.
 # support markdown and markdown-table. 
 extensions = [
-    'recommonmark',
-    'sphinx_markdown_tables'
+    'sphinx_markdown_tables',
 ]
-
+from recommonmark.parser import CommonMarkParser
 source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
+'.md': CommonMarkParser,
 }
-
 source_suffix = ['.rst', '.md']
 
 # Add any paths that contain templates here, relative to this directory.
